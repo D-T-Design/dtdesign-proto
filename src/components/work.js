@@ -19,7 +19,7 @@ const projects = [
 ];
 function Work() {
 	return (
-		<section className="body fade" id="work">
+		<section className="body" id="work">
 			<div className="col">
 				<h1>My Design Work</h1>
 				{projects.map((project, i) => (

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 function Menu() {
 	return (
-		<section className="body fade" id="menu">
+		<section className="body" id="menu">
 			<ul className="nav-list">
 				<li>
 					<Link to="/" className="nav-link">
