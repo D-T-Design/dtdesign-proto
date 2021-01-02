@@ -1,6 +1,6 @@
 # David Torres React Portfolio Website
 
-My personal portfolio website, built with React.  The [previous website version] (https://github.com/D-T-Design/dtdesign-react) was also a React app but it was basically a single page HTML Bootstrap page converted into a simple React app.  This version is built from the ground up as a React app, and designed with a different purpose in mind.
+My personal portfolio website, built with React.  The [previous website version](https://github.com/D-T-Design/dtdesign-react) was also a React app but it was basically a single page HTML Bootstrap page converted into a simple React app.  This version is built from the ground up as a React app, and designed with a different purpose in mind.
 
 ## The Scope and Goals
 
