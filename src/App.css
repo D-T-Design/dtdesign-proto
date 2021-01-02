@@ -151,6 +151,7 @@ section section img {
 	display: grid;
 	grid-template-rows: 75px auto 265px;
 	align-items: flex-start;
+	overflow: hidden;
 }
 .contact-links {
 	display: flex;
@@ -532,4 +533,25 @@ section section img {
 	#menu .menu-large {
 		display: none;
 	}
+}
+.body-enter {
+	opacity: 0;
+}
+.body-enter-active {
+	opacity: 1;
+	transition: opacity 300ms;
+}
+.body-exit {
+	opacity: 1;
+}
+.body-exit-active {
+	opacity: 0;
+	transition: opacity 300ms;
+}
+.switch-wrapper {
+	display: grid;
+	grid-template-areas: 'switch';
+}
+.switch-wrapper > div {
+  grid-area: switch;
 }

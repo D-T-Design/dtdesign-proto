@@ -7,9 +7,10 @@ import Contact from "./components/contact";
 import Footer from "./components/footer";
 import Project from "./components/project";
 import Menu from "./components/menu";
-import { Router, Switch, Route } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import { wrapHistory } from "oaf-react-router";
+import { AnimatedSwitch } from "react-router-transition";
 
 const history = createBrowserHistory();
 wrapHistory(history);
@@ -59,11 +60,16 @@ function App() {
 			<div className="container">
 				<Router history={history}>
 					<Nav routes={routes}></Nav>
-					<Switch>
+					<AnimatedSwitch
+						atEnter={{ opacity: 0 }}
+						atLeave={{ opacity: 0 }}
+						atActive={{ opacity: 1 }}
+						className="switch-wrapper"
+					>
 						{routes.map((route, i) => (
 							<Route exact key={i} {...route} />
 						))}
-					</Switch>
+					</AnimatedSwitch>
 				</Router>
 				<Footer />
 			</div>

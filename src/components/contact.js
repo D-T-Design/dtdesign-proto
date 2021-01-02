@@ -1,6 +1,6 @@
 function Contact() {
 	return (
-		<section className="body" id="contact">
+		<section className="body fade" id="contact">
 			<h1>Contact David Torres</h1>
 			<div className="col">
 				<a href="tel:7024730606" className="contact-links">

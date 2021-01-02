@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 function Home() {
 	return (
-		<section className="body" id="home">
+		<section className="body fade" id="home">
 			<div className="col">
 				<section id="header">
 					<h1>Web Designer and Developer</h1>

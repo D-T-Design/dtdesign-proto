@@ -1,6 +1,6 @@
 function About() {
 	return (
-		<section className="body" id="about">
+		<section className="body fade" id="about">
 			<div className="col">
 				<h1>About David Torres</h1>
 				<p>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 function Project() {
 	return (
-		<section className="body" id="project">
+		<section className="body fade" id="project">
 			<div className="grid">
 				<h1>Project Title</h1>
 				<section className="project-links">
