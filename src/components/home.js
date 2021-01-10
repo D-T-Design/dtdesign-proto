@@ -1,27 +1,49 @@
 import { Link } from "react-router-dom";
+import ReactTooltip from "react-tooltip";
+import Heading from "./ui/heading";
+
+const skills = [
+	{ id: "photoshop", title: "Adobe Photoshop" },
+	{ id: "xd", title: "Adobe XD" },
+	{ id: "ai", title: "Adobe Illustrator" },
+	{ id: "shopify", title: "Shopify" },
+	{ id: "react", title: "ReactJS" },
+	{ id: "html", title: "HTML5" },
+	{ id: "css", title: "CSS3" },
+	{ id: "js", title: "JavaScript" },
+];
+
 function Home() {
 	return (
 		<section className="body" id="home">
 			<div className="col">
 				<section id="header">
-					<h1>Web Designer and Developer</h1>
+					<Heading rank={1} text={"David Torres"} type="headline" />
+					<Heading rank={2} text={"Web Designer and Developer"} type="subtitle" />
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et quam vel dolor
-						mollis semper. Nulla consectetur maximus commodo. Sed consectetur mauris id ipsum
-						blandit sagittis.
+						I’m a web specialist with over 10 years of experience. I help businesses plan and
+						execute online strategies utilizing modern web technology to achieve their goals. I
+						enjoy collaborating with like-minded creative professionals to deliver results that
+						“Wow!”
+					</p>
+					<p>&nbsp;</p>
+					<p>
+						Browse my portfolio to see my work and style, contact me if you want to work with me to
+						achieve your digital goals!
 					</p>
 				</section>
+
 				<section id="skills">
-					<h2>Skills and Technology</h2>
+					<Heading rank={2} text={"Skills and Technology"} type="headline" />
 					<div className="skills">
-						<img src="/img/circle.svg" alt="" />
-						<img src="/img/circle.svg" alt="" />
-						<img src="/img/circle.svg" alt="" />
-						<img src="/img/circle.svg" alt="" />
-						<img src="/img/circle.svg" alt="" />
-						<img src="/img/circle.svg" alt="" />
-						<img src="/img/circle.svg" alt="" />
-						<img src="/img/circle.svg" alt="" />
+						{skills.map((skill, index) => (
+							<div className="skill-container" data-tip data-for={skill.id} key={index}>
+								<img src={`/img/${skill.id}.svg`} alt={skill.title} />
+								<ReactTooltip id={skill.id} place="bottom" effect="float">
+									{skill.title}
+								</ReactTooltip>
+							</div>
+						))}
 					</div>
 				</section>
 			</div>

@@ -120,6 +120,7 @@ p {
 	font-size: 1.25rem;
 	line-height: 1.5em;
 	padding-top: 0;
+	color: #8C8C8C;
 }
 section section {
 	padding-bottom: 1.5rem;
@@ -144,7 +145,13 @@ section section img {
 	width: 100%;
 }
 .container {
-	background-color: #535353;
+	background: rgb(18, 17, 17);
+	background: linear-gradient(
+		45deg,
+		rgba(18, 17, 17, 1) 0%,
+		rgba(49, 47, 45, 1) 50%,
+		rgba(18, 17, 17, 1) 100%
+	);
 	padding: 1.5rem;
 	margin-bottom: 1.5rem;
 	min-height: 83%;
@@ -172,8 +179,7 @@ section section img {
 }
 .footer {
 	width: 100%;
-	background-color: #535353;
-	border-top: 1px solid white;
+	border-top: 1px solid #6D6D6D;
 	margin-top: 1.5rem;
 	padding-top: 1.5rem;
 	display: flex;
@@ -212,6 +218,11 @@ section section img {
 .grid {
 	display: grid;
 }
+.heading-subtitle {
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+}
 .logo img {
 	height: 50px;
 }
@@ -228,7 +239,7 @@ section section img {
 }
 .nav {
 	align-items: center;
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid #6D6D6D;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -315,8 +326,17 @@ section section img {
 	position: relative;
 	row-gap: 1rem;
 }
-.skills img {
-	max-width: 80px;
+.skill-container {
+	width: 84px;
+	height: 84px;
+	border-radius: 100%;
+	background-color:#262322;
+	box-shadow: 0px 5px 10px rgba(0,0,0,0.7);
+	display: flex;
+}
+.skill-container img {
+	max-height: 50px;
+	margin:auto
 }
 .social {
 	display: flex;
@@ -536,8 +556,8 @@ section section img {
 }
 .switch-wrapper {
 	display: grid;
-	grid-template-areas: 'switch';
+	grid-template-areas: "switch";
 }
 .switch-wrapper > div {
-  grid-area: switch;
+	grid-area: switch;
 }

@@ -1,7 +1,8 @@
+import Heading from "./ui/heading";
 function Contact() {
 	return (
 		<section className="body" id="contact">
-			<h1>Contact David Torres</h1>
+			<Heading rank={1} text={"Contact David Torres"} type="headline" />
 			<div className="col">
 				<a href="tel:7024730606" className="contact-links">
 					<img src="/img/phone.svg" alt="" />
