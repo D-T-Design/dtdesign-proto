@@ -22,7 +22,7 @@ const routes = [
 	},
 	{
 		path: "/work",
-		component: Work,
+		render: (props) => <Work {...props} data={projects} isAuthed={true} />,
 	},
 	{
 		path: "/about",
@@ -37,20 +37,61 @@ const routes = [
 		component: Project,
 	},
 	{
-		path: "/work/project1",
-		component: Project,
+		path: "/work/srtservices",
+		render: (props) => <Project {...props} data={projects} isAuthed={true} />,
 	},
 	{
 		path: "/work/project2",
-		component: Project,
+		render: (props) => <Project {...props} data={projects} isAuthed={true} />,
 	},
 	{
 		path: "/work/project3",
-		component: Project,
+		render: (props) => <Project {...props} data={projects} isAuthed={true} />,
 	},
 	{
 		path: "/menu",
 		component: Menu,
+	},
+];
+const projects = [
+	{
+		img: "/img/project-gif.svg",
+		data: {
+			title: "S-R-T Services, Inc. Website",
+			path: "/work/srtservices",
+			linkURL: "#",
+			codeURL: "#",
+			description:
+				"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus vel sequi necessitatibus laborum, rerum error unde facilis possimus corrupti quo quam, omnis animi aliquid praesentium in pariatur eum voluptates ut.",
+			tech: ["HTML", "CSS", "JS"],
+			images: ["img.svg"],
+		},
+	},
+	{
+		img: "/img/project-gif.svg",
+		data: {
+			title: "Project #2",
+			path: "/work/project2",
+			linkURL: "#",
+			codeURL: "#",
+			description:
+				"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus vel sequi necessitatibus laborum, rerum error unde facilis possimus corrupti quo quam, omnis animi aliquid praesentium in pariatur eum voluptates ut.",
+			tech: ["HTML", "CSS"],
+			images: ["img.svg"],
+		},
+	},
+	{
+		img: "/img/project-gif.svg",
+		data: {
+			title: "Project #3",
+			path: "/work/project3",
+			linkURL: "#",
+			codeURL: "#",
+			description:
+				"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus vel sequi necessitatibus laborum, rerum error unde facilis possimus corrupti quo quam, omnis animi aliquid praesentium in pariatur eum voluptates ut.",
+			tech: ["HTML", "CSS"],
+			images: ["img.svg"],
+		},
 	},
 ];
 
@@ -67,7 +108,11 @@ function App() {
 						className="switch-wrapper"
 					>
 						{routes.map((route, i) => (
-							<Route exact key={i} {...route} />
+							<Route
+								exact
+								key={i}
+								{...route}
+							/>
 						))}
 					</AnimatedSwitch>
 				</Router>

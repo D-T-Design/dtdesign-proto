@@ -1,21 +1,25 @@
 import { Link } from "react-router-dom";
-function Project() {
+
+function Project(props) {
+	let data = props.data;
+	let location = props.location.pathname;
+	let projectData = data.find((project) => project.data.path === location).data;
 	return (
 		<section className="body" id="project">
 			<div className="grid">
-				<h1>Project Title</h1>
+				<h1>{projectData.title}</h1>
 				<section className="project-links">
 					<button>Link</button>
 					<button>Code</button>
 				</section>
 				<section className="project-content">
-					<p>
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus vel sequi
-						necessitatibus laborum, rerum error unde facilis possimus corrupti quo quam, omnis animi
-						aliquid praesentium in pariatur eum voluptates ut.
-					</p>
+					<p>{projectData.description}</p>
 					<h2>Tech Used</h2>
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+					<ul>
+						{projectData.tech.map((text, index) => (
+							<li key={index}>{text}</li>
+						))}
+					</ul>
 				</section>
 				<section className="project-photos">
 					<img src="/img/img.svg" alt="" />

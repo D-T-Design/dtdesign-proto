@@ -1,33 +1,18 @@
 import { Link } from "react-router-dom";
+import React from "react";
 
-const projects = [
-	{
-		path: "/work/project1",
-		title: "Project #1",
-		img: "/img/project-gif.svg",
-	},
-	{
-		path: "/work/project2",
-		title: "Project #2",
-		img: "/img/project-gif.svg",
-	},
-	{
-		path: "/work/project3",
-		title: "Project #3",
-		img: "/img/project-gif.svg",
-	},
-];
-function Work() {
+function Work(props) {
+	let data = props.data;
 	return (
 		<section className="body" id="work">
 			<div className="col">
 				<h1>My Design Work</h1>
-				{projects.map((project, i) => (
+				{data.map((project, i) => (
 					<div className="project-thumb" key={i}>
-						<h2>{project.title}</h2>
+						<h2>{project.data.title}</h2>
 						<img src={project.img} alt="" />
 						<div className="project-links">
-							<Link to={project.path}>
+							<Link to={project.data.path}>
 								<button>Link</button>
 							</Link>
 							<button>Code</button>
