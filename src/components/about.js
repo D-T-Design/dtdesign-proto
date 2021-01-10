@@ -1,7 +1,15 @@
 import Heading from "./ui/heading";
+import { Helmet } from "react-helmet";
 function About() {
 	return (
 		<section className="body" id="about">
+			<Helmet>
+				<title>About David Torres - The story so far...</title>
+				<meta
+					name="description"
+					content="Who am I? What have I done?  Why do I keep asking questions? All this and more..."
+				/>
+			</Helmet>
 			<div className="col">
 				<Heading rank={1} text={"About David Torres"} type="headline" />
 				<p>

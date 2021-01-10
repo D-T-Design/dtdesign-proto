@@ -1,4 +1,6 @@
 import Heading from "./ui/heading";
+import { Helmet } from "react-helmet";
+
 const contactInfo = {
 	heading: "Contact David Torres",
 	phone: "7024730606",
@@ -16,10 +18,18 @@ const contactInfo = {
 		},
 	],
 };
+
 function Contact() {
 	let phone = contactInfo.phone;
 	return (
 		<section className="body" id="contact">
+			<Helmet>
+				<title>Contact David Torres for Web Design and Development</title>
+				<meta
+					name="description"
+					content="Contact me for help building, maintaining, fixing, or updating your website."
+				/>
+			</Helmet>
 			<Heading rank={1} text={contactInfo.heading} type="headline" />
 			<div className="col">
 				<a href={`tel:${phone}`} className="contact-links">

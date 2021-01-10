@@ -1,10 +1,18 @@
 import { Link } from "react-router-dom";
 import React from "react";
+import { Helmet } from "react-helmet";
 
 function Work(props) {
 	let data = props.data;
 	return (
 		<section className="body" id="work">
+			<Helmet>
+				<title>My Web Design and Development Portfolio - David Torres Design</title>
+				<meta
+					name="description"
+					content="Check out my work from happy clients and personal projects."
+				/>
+			</Helmet>
 			<div className="col">
 				<h1>My Design Work</h1>
 				{data.map((project, i) => (

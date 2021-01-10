@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 function Menu() {
 	return (
 		<section className="body" id="menu">
+			<Helmet>
+				<title>Browse my Web Design and Development Portfolio - David Torres Design</title>
+				<meta
+					name="description"
+					content="Learn more about me, including what kind of work I do, who I am, and how to contact me."
+				/>
+			</Helmet>
 			<ul className="nav-list">
 				<li>
 					<Link to="/" className="nav-link">

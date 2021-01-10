@@ -11,6 +11,7 @@ import { Router, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import { wrapHistory } from "oaf-react-router";
 import { AnimatedSwitch } from "react-router-transition";
+import { Helmet } from "react-helmet";
 
 const history = createBrowserHistory();
 wrapHistory(history);
@@ -98,6 +99,14 @@ const projects = [
 function App() {
 	return (
 		<div className="App">
+			<Helmet>
+				<meta charSet="utf-8" />
+				<title>David Torres - Web Designer and Developer</title>
+				<meta
+					name="description"
+					content="Web specialist with over 10 years of experience.  Use modern technology to achieve your web goals!"
+				/>
+			</Helmet>
 			<div className="container">
 				<Router history={history}>
 					<Nav routes={routes}></Nav>
@@ -108,11 +117,7 @@ function App() {
 						className="switch-wrapper"
 					>
 						{routes.map((route, i) => (
-							<Route
-								exact
-								key={i}
-								{...route}
-							/>
+							<Route exact key={i} {...route} />
 						))}
 					</AnimatedSwitch>
 				</Router>
