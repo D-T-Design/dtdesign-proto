@@ -16,6 +16,9 @@ This project's goal is to revamp my personal website as a tool to get me hired a
 
 I will keep track of my work using this repo, if anyone comes across this please review my overall workflow and let me know what I can do better!
 
+## Update 1/9/21
+Steady updates have been made so far including data structure, skill icons, SEO functionality, and code scalability.  See commits for progress.
+
 ---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
