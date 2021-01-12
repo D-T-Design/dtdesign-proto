@@ -77,6 +77,8 @@ th {
 }
 a {
 	cursor: pointer;
+	color: white;
+	font-style: italic;
 }
 
 /* Styles */
@@ -222,6 +224,7 @@ section section img {
 	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	text-transform: uppercase;
+	margin-top: -1.5rem;
 }
 .logo img {
 	height: 50px;
@@ -539,6 +542,14 @@ section section img {
 	}
 	.links button {
 		margin-right: 1rem;
+		background-color: #D94814;
+		border-bottom: 2px solid transparent;
+		transition: all 0.3s;
+	}
+	.links button:hover {
+		background-color: #bd3504;
+		border-color: white;
+		transform: scale(1.05);
 	}
 	.social-links {
 		justify-content: flex-start;

@@ -28,8 +28,10 @@ function Home() {
 					</p>
 					<p>&nbsp;</p>
 					<p>
-						Browse my portfolio to see my work and style, contact me if you want to work with me to
-						achieve your digital goals!
+						Browse my portfolio to see my work and style,{" "}
+						<Link to="/contact">
+							contact me if you want to work with me to achieve your digital goals!
+						</Link>
 					</p>
 				</section>
 
