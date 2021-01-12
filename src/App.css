@@ -122,7 +122,12 @@ p {
 	font-size: 1.25rem;
 	line-height: 1.5em;
 	padding-top: 0;
-	color: #8C8C8C;
+	color: #8c8c8c;
+	margin-bottom: 1em;
+}
+p strong {
+	color: white;
+	font-style: italic;
 }
 section section {
 	padding-bottom: 1.5rem;
@@ -164,7 +169,7 @@ section section img {
 }
 .contact-links {
 	display: flex;
-	background-color: #747474;
+	background-color: transparent;
 	flex-direction: column;
 	align-items: center;
 	margin-bottom: 1rem;
@@ -174,6 +179,16 @@ section section img {
 	font-weight: 900;
 	text-decoration: none;
 	font-size: 1.5rem;
+	font-style: normal;
+	border: 1px solid #6d6d6d;
+	border-bottom-width: 2px;
+	border-bottom-color: #d94814;
+	transition: all 0.1s;
+}
+.contact-links:hover {
+	border-color: white;
+	border-bottom-color: #d94814;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 .contact-links img {
 	width: 2.25rem;
@@ -181,7 +196,7 @@ section section img {
 }
 .footer {
 	width: 100%;
-	border-top: 1px solid #6D6D6D;
+	border-top: 1px solid #6d6d6d;
 	margin-top: 1.5rem;
 	padding-top: 1.5rem;
 	display: flex;
@@ -221,7 +236,7 @@ section section img {
 	display: grid;
 }
 .heading-subtitle {
-	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	text-transform: uppercase;
 	margin-top: -1.5rem;
@@ -242,7 +257,7 @@ section section img {
 }
 .nav {
 	align-items: center;
-	border-bottom: 1px solid #6D6D6D;
+	border-bottom: 1px solid #6d6d6d;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -333,13 +348,13 @@ section section img {
 	width: 84px;
 	height: 84px;
 	border-radius: 100%;
-	background-color:#262322;
-	box-shadow: 0px 5px 10px rgba(0,0,0,0.7);
+	background-color: #262322;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
 	display: flex;
 }
 .skill-container img {
 	max-height: 50px;
-	margin:auto
+	margin: auto;
 }
 .social {
 	display: flex;
@@ -351,6 +366,18 @@ section section img {
 	background-color: rgba(0, 0, 0, 0.25);
 	margin-right: 15px;
 	padding: 10px;
+	width: 54px;
+	height: 54px;
+	display: flex;
+	border-bottom: 1px solid transparent;
+	transition: all 0.1s;
+}
+.social a:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+	border-color: #d94814;
+}
+.social a img {
+	margin: auto;
 }
 .social-links {
 	display: flex;
@@ -359,6 +386,13 @@ section section img {
 }
 .social-links a {
 	padding: 0.75rem;
+}
+.social-links a svg path {
+	fill: #fff;
+	transition: fill 0.1s ease;
+}
+.social-links a:hover svg path {
+	fill: #d94814;
 }
 #header,
 #skills,
@@ -534,7 +568,7 @@ section section img {
 	}
 	.nav-link.current {
 		color: white;
-		border-color: #D94814;
+		border-color: #d94814;
 	}
 	.nav-list {
 		flex-flow: row;
@@ -542,9 +576,9 @@ section section img {
 	}
 	.links button {
 		margin-right: 1rem;
-		background-color: #D94814;
+		background-color: #d94814;
 		border-bottom: 2px solid transparent;
-		transition: all 0.3s;
+		transition: all 0.1s;
 	}
 	.links button:hover {
 		background-color: #bd3504;
