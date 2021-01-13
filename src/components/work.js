@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import { Helmet } from "react-helmet";
+import { LinkIcon } from "./ui/icons";
 
 function Work(props) {
 	let data = props.data;
@@ -21,9 +22,11 @@ function Work(props) {
 						<img src={project.img} alt="" />
 						<div className="project-links">
 							<Link to={project.data.path}>
-								<button>Link</button>
+								<button className="cta">View More</button>
 							</Link>
-							<button>Code</button>
+							<button className="subtle">
+								Live Version <LinkIcon />
+							</button>
 						</div>
 					</div>
 				))}

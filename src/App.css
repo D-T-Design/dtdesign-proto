@@ -90,6 +90,10 @@ body {
 	color: white;
 	font-family: interstate, sans-serif;
 	padding: 1.5rem;
+	background-image: url("./img/bg.jpg");
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
 }
 button {
 	align-items: center;
@@ -135,6 +139,12 @@ section section {
 section section img {
 	width: 100%;
 }
+a {
+	transition: all 0.05s;
+}
+a:hover {
+	color: #d94814;
+}
 .body {
 	padding-top: 1.5rem;
 	display: flex;
@@ -153,12 +163,6 @@ section section img {
 }
 .container {
 	background: rgb(18, 17, 17);
-	background: linear-gradient(
-		45deg,
-		rgba(18, 17, 17, 1) 0%,
-		rgba(49, 47, 45, 1) 50%,
-		rgba(18, 17, 17, 1) 100%
-	);
 	padding: 1.5rem;
 	margin-bottom: 1.5rem;
 	min-height: 83%;
@@ -166,6 +170,12 @@ section section img {
 	grid-template-rows: 75px auto 265px;
 	align-items: flex-start;
 	overflow: hidden;
+	background: url("./img/bg-container.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border: 1px solid #3c3c3c;
+	box-shadow: 0px 20px 50px rgba(0, 0, 0, 1);
 }
 .contact-links {
 	display: flex;
@@ -197,7 +207,7 @@ section section img {
 .footer {
 	width: 100%;
 	border-top: 1px solid #6d6d6d;
-	margin-top: 1.5rem;
+	margin-top: 5rem;
 	padding-top: 1.5rem;
 	display: flex;
 	flex-flow: row wrap;
@@ -215,7 +225,7 @@ section section img {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	margin-top: 2rem;
+	margin: 0;
 	width: 100%;
 }
 .footer p a {
@@ -224,6 +234,9 @@ section section img {
 	font-weight: bold;
 	letter-spacing: 2px;
 	text-decoration: none;
+}
+.footer p a:hover {
+	color: #d94814;
 }
 .footer p span {
 	display: block;
@@ -236,7 +249,7 @@ section section img {
 	display: grid;
 }
 .heading-subtitle {
-	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	font-family: interstate, Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	text-transform: uppercase;
 	margin-top: -1.5rem;
@@ -309,6 +322,7 @@ section section img {
 .project-links {
 	display: flex;
 	justify-content: flex-start;
+	flex-direction: row-reverse;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 }
@@ -316,13 +330,26 @@ section section img {
 	text-decoration: none;
 }
 .project-links button {
-	background-color: #7c7c7c;
+	background-color: transparent;
 	display: flex;
 	font-size: 1.25rem;
 	margin: 0;
-	margin-right: 1rem;
 	padding: 10px 20px;
 	position: relative;
+}
+button.cta {
+	background-color: #d94814;
+}
+button.subtle {
+	font-family: interstate, Arial, Helvetica, sans-serif;
+	font-style: italic;
+	color: #d5d5d5;
+	margin-right: 1em;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+button.subtle svg {
+	margin-left: 1em;
 }
 .project-photos img {
 	margin-bottom: 1.5rem;
@@ -499,7 +526,6 @@ section section img {
 	}
 	.project-links {
 		grid-area: links;
-		margin: 0;
 	}
 	.project-content {
 		grid-area: content;
@@ -539,7 +565,7 @@ section section img {
 		max-width: 96%;
 		margin: auto;
 		padding: 3rem;
-		grid-template-rows: 85px auto 84px;
+		grid-template-rows: 85px auto 1fr;
 	}
 	.footer p {
 		width: 100%;

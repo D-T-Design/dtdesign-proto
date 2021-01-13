@@ -129,4 +129,33 @@ function MenuIcon() {
 	);
 }
 
-export { Facebook, LinkedIn, Email, Phone, PDF, MenuIcon };
+function LinkIcon() {
+	return (
+		<svg
+			version="1.1"
+			id="Layer_1"
+			xmlns="http://www.w3.org/2000/svg"
+			x="0px"
+			y="0px"
+			width="16"
+			height="16"
+			viewBox="0 0 32 32"
+			role="img"
+			aria-labelledby="link-title"
+		>
+			<title id="link-title">Link to External Website</title>
+			<path
+				id="LinkIcon"
+				data-name="LinkIcon"
+				fill="#d5d5d5"
+				d="M29.5,14.5l-6,6c-3.3,3.3-8.7,3.3-12,0c-0.5-0.5-0.9-1.1-1.3-1.7L13,16c0.1-0.1,0.3-0.2,0.5-0.3
+	c0.2,0.7,0.5,1.3,1,1.8c1.7,1.7,4.4,1.7,6,0l6-6c1.7-1.7,1.7-4.4,0-6c-1.7-1.7-4.3-1.7-6,0l-2.1,2.1C16.6,7,14.8,6.8,13,7l4.6-4.6
+	c3.3-3.3,8.7-3.3,12,0C32.8,5.8,32.8,11.2,29.5,14.5z M13.6,24.4l-2.1,2.1c-1.7,1.7-4.4,1.7-6,0c-1.7-1.7-1.7-4.4,0-6l6-6
+	c1.7-1.7,4.3-1.7,6,0c0.5,0.5,0.9,1.1,1,1.8c0.2-0.1,0.3-0.2,0.5-0.3l2.8-2.8c-0.4-0.6-0.8-1.2-1.3-1.7c-3.3-3.3-8.7-3.3-12,0l-6,6
+	c-3.3,3.3-3.3,8.7,0,12c3.3,3.3,8.7,3.3,12,0l4.6-4.6C17.2,25.2,15.4,25,13.6,24.4z"
+			/>
+		</svg>
+	);
+}
+
+export { Facebook, LinkedIn, Email, Phone, PDF, MenuIcon, LinkIcon };

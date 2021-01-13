@@ -26,7 +26,6 @@ function Home() {
 						enjoy collaborating with like-minded creative professionals to deliver results that
 						“Wow!”
 					</p>
-					<p>&nbsp;</p>
 					<p>
 						Browse my portfolio to see my work and style,{" "}
 						<Link to="/contact">
