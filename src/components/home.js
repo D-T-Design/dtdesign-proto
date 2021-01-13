@@ -18,13 +18,10 @@ function Home() {
 		<section className="body" id="home">
 			<div className="col">
 				<section id="header">
-					<Heading rank={1} text={"David Torres"} type="headline" />
-					<Heading rank={2} text={"Web Designer and Developer"} type="subtitle" />
+					<Heading rank={1} text={"Web Designer and Developer"} type="headline" />
 					<p>
-						I’m a web specialist with over 10 years of experience. I help businesses plan and
-						execute online strategies utilizing modern web technology to achieve their goals. I
-						enjoy collaborating with like-minded creative professionals to deliver results that
-						“Wow!”
+						I’m David Torres, a web specialist with over 10 years of experience. I have the eye and
+						experience for design, along with the technical skill of development.  Your business benefits from me on your team, I love collaborating with other professionals and learning how they think.  From basic websites to web apps, we can work together to get your projects done!
 					</p>
 					<p>
 						Browse my portfolio to see my work and style,{" "}
